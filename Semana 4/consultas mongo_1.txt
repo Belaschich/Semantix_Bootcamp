@@ -1,0 +1,17 @@
+1- use izabela
+	show collections
+
+2-
+a)db.produto.find({nome : "mouse"})
+
+b)db.produto.find({ qtd : {$eq: 20} },{_id: 0, nome:1})
+
+c)db.produto.find({qtd : {$lte: 20}},{_id: 0, descricao: 0})
+
+d)db.produto.find({qtd : {$in: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}})
+  db.produto.find({qtd : {$gte: 10, $lte:20}}) (professor) 	
+
+e)db.produto.find({"descricao.conexao": {$eq: "USB"}},{_id: 0, qtd:0})
+
+f)db.produto.find({"descricao.so": {$eq: ["Windows", "Windows 10"]}})
+  db.produto.find({"descricao.so": {$in: ["Windows", "Windows 10"]}}) (professor)

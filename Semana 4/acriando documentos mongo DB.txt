@@ -1,0 +1,18 @@
+1- use izabela (CRIANDO BASE DE DADOS)
+
+2- show dbs (VISUALIZANDO A BASE ( A MESMA AINDA NAO EXIST, POIS APENAS APARECE QUANDO CRIAMOS UMA COLEÇÃO))
+
+3- use izabela
+	db.createCollection('produto') (CRIANDO UMA COLEÇÃO)
+
+4- show dbs (VISUALIZANDO A BASE DE DADOS)
+
+5- show collections (VISUALIZANDO A COLEÇÃO)
+
+6- db.produto.insertMany([{_id: 1, nome: "cpu i5", "qtd": 15}, 
+			  {_id: 2, nome: "memória ram", qtd: 10, descricao: {armazenamento: "8GB", tipo:"DDR4"}},
+			  {_id: 3, nome: "mouse", qtd: 50, descricao: {conexao: "USB", so: ["Windows", "Mac", "Linux"]}}),
+			  {_id: 4, nome: "hd externo", qtd: 20, descricao: {conexao: "USB", armazenamento: "500GB", so: ["Windows 10", "Windows 8", "Windows 7"]}}])
+(INSERINDO AS COLEÇÕES EM UM ÚNICO CÓDICO)
+
+7- db.produto.find().pretty() (VISUALIZANDO AS COLEÇÕES)

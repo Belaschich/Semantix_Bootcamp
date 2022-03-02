@@ -1,0 +1,15 @@
+1- use izabela
+	show collections
+
+2-
+a) db.produto.find().sort({nome: 1})
+
+b) db.produto.find().sort({nome: 1, qtd: 1}).limit(3)
+
+c) db.produto.findOne({"descricao.conexao": {$eq: "USB"}}),
+
+d) db.produto.find({"descricao.conexao": {$eq: "USB"}, qtd :{$lte: 25}})
+
+e) db.produto.find({$or: [{"descricao.conexao": {$eq: "USB"}}, {qtd :{$lt: 25}}]})
+
+f) db.produto.find({$or: [{"descricao.conexao": {$eq: "USB"}}, {qtd :{$lte: 25}]}, {_id:1})

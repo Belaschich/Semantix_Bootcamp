@@ -1,0 +1,14 @@
+1- use izabela
+	db.createCollection('teste') (CRIANDO UMA COLEÇÃO)
+
+2- db.teste.insertOne({usuario: "Semantix", data_acesso: new Date()}) 
+
+3- db.teste.find({data_acesso: {$gte: new Date("2020")}})
+
+4- db.teste.updateOne({usuario: "Semantix"}, {$currentDate:{data_acesso: {$type:"timestamp"}}})
+
+5- db.teste.find()
+
+6- db.teste.deleteOne({_id: ObjectId})
+
+7- db.teste.drop()       

@@ -1,0 +1,22 @@
+sqoop import database -> hdfs(datanode)
+
+sqoop list-databases --connect jdbc:mysql://database --username root --password secret 
+
+sqoop import --table employees  --connect jdbc:mysql://database/employees --username root --password secret --warehouse-dir /user/hive/warehouse/db_test_a 
+
+sqoop import --table employees  --connect jdbc:mysql://database/employees --username root --password secret --where "gender='M'" --warehouse-dir /user/hive/warehouse/db_test_a 
+
+sqoop import --table titles  --connect jdbc:mysql://database/employees --username root --passwo
+rd secret -m 8 --as-parquetfile  --warehouse-dir /user/hive/warehouse/db_test2_5 --compress --compression-codec 
+org.apache.hadoop.io.compress.SnappyCodec 
+
+
+
+sqoop import --table cp_rental_append --connect jdbc:mysql://database/sakila --username root --password secret --warehouse-dir /user/hive/warehouse/db_test_t3 -m 1 --append 
+
+
+16049       | 2005-08-23 22:50:12.0
+
+
+
+sqoop import --table titles --connect jdbc:mysql://database/employees --username root --password secret --warehouse-dir /user/aluno/izabela/data -m 1

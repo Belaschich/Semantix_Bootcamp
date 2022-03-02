@@ -1,0 +1,19 @@
+1- use izabela
+	show collections
+		db.produto.find()
+
+2- db.produto.createIndex({nome: 1}, {nome: "query_produto"})
+
+3- db.produto.getIndexes()
+
+4- db.produto.find()
+
+5- db.produto.find().explain()
+
+6- db.produto.find().hint({nome: 1}) 
+
+7 - db.produto.find().hint({nome: 1}).explain()
+
+8- db.produto.dropIndex({nome: 1}) 
+
+9-  db.produto.getIndexes()

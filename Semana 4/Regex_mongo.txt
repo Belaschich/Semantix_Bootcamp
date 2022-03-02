@@ -1,0 +1,16 @@
+1- use izabela
+	show collections
+		db.produto.find()
+
+2- db.produto.find({nome: {$regex: "cpu"}})
+
+3- db.produto.find({nome: {$regex: "^hd"}}, {_id: 0, nome:1, qtd:1, descricao: 0})
+
+4- db.produto.find({"descricao.armazenamento": {$regex: “GB", $options: "i"}}, {_id: 0, nome:1, qtd:0, descricao: 1})
+
+5- db.produto.find({nome: {$regex: “mem.ria"}})
+
+6- db.produto.find({qtd: {$regex: "[a-z]"}})
+
+7- db.produto.find({"descricao.sistema": {$regex: "^Windows$"}})    
+

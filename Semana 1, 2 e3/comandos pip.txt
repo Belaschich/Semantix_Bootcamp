@@ -1,0 +1,3 @@
+pip install --upgrade pip ---> atualização da biblioteca pedida
+
+pip list ----> lista das bibliotecas instaladas

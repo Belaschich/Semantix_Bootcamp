@@ -1,0 +1,53 @@
+create table pop(
+zip_code  int,
+total_population  int,
+median_age  float,
+total_males  int,
+total_females  int,
+total_households  int,
+average_household_size  float
+)
+row format delimited
+fields terminated by ','
+lines terminated by '\n'
+stored as textfile
+tblproperties("skip.header.line.count"="1");
+
+create table pop_parquet(
+zip_code  int,
+total_population  int,
+median_age  float,
+total_males  int,
+total_females  int,
+total_households  int,
+average_household_size  float
+)
+stored as parquet;
+
+create table pop_parquet_snappy(
+zip_code  int,
+total_population  int,
+median_age  float,
+total_males  int,
+total_females  int,
+total_households  int,
+average_household_size  float
+)
+stored as parquet
+tblproperties("skip.header.line.count"="1");
+
+
+create external table nascimento(
+nome string,
+sexo string,
+frequencia int
+)
+partitioned by (ano int)
+row format delimited
+fields terminated by ','
+lines terminated by '\n'
+stored as textfile
+location '/user/aluno/izabela/data/nascimento';
+
+tblproperties("skip.header.line.count"="1");
+clustered by (frequencia) into 4 bukets
