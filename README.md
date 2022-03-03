@@ -21,21 +21,21 @@
  - [X] Manipulação de dados com uso do Hive;
  - [X] Otimização de consultas em grandes volumes de dados estruturados e semiestruturados com uso de Hive;
  - [X] Ingestão de dados relacionais para o HDFS/Hive, com uso do Sqoop;
- - [ ] Otimização de importação no Sqoop;
- - [ ] Exportação de dados do HDFS para o SGBD, com uso do Sqoop;
- - [ ] Manipulação de dados com HBase;
- - [ ] Operações com Dataframe em Spark para processamento de dados em batch;
- - [ ] Uso do Spark SQL Queries para consultas de dados estruturados e semiestruturados.
+ - [X] Otimização de importação no Sqoop;
+ - [X] Exportação de dados do HDFS para o SGBD, com uso do Sqoop;
+ - [X] Manipulação de dados com HBase;
+ - [X] Operações com Dataframe em Spark para processamento de dados em batch;
+ - [X] Uso do Spark SQL Queries para consultas de dados estruturados e semiestruturados.
 
    **MongoDB - Básico (Semana 4)**
 
- - [ ] Entendimento de conceitos e arquitetura NoSQL e MongoDB;
- - [ ] Instalação de cluster MongoDB através de container e Cloud;
- - [ ] Manipular coleções, documentos e índices;
- - [ ] Realizar diversas pesquisas no MongoDB com diferentes operadores;
- - [ ] Fazer uso das interfaces gráficas MongoExpress e MongoCompass;
- - [ ] Trabalhar com pipeline de agregações;
- - [ ] Entendimento de Replicação e shards.
+ - [X] Entendimento de conceitos e arquitetura NoSQL e MongoDB;
+ - [X] Instalação de cluster MongoDB através de container e Cloud;
+ - [X] Manipular coleções, documentos e índices;
+ - [X] Realizar diversas pesquisas no MongoDB com diferentes operadores;
+ - [X] Fazer uso das interfaces gráficas MongoExpress e MongoCompass;
+ - [X] Trabalhar com pipeline de agregações;
+ - [X] Entendimento de Replicação e shards.
  
     **Redis – Básico (Semana 5)**
 
