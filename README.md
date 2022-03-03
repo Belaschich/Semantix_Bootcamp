@@ -1,16 +1,6 @@
 # Semantix_Bootcamp
  Treinamento de Big Data Engineer no Semantix Academy
 
-
-
-
-
-
-  
-
-
-
-
    **Trilha de Estudo:**
 
    **Big Data Foundations (Semana 1, 2 e 3)** 
@@ -37,15 +27,7 @@
  - [X] Trabalhar com pipeline de agregações;
  - [X] Entendimento de Replicação e shards.
  
-    **Redis – Básico (Semana 5)**
-
- - [ ] Entendimento de conceitos e arquitetura NoSQL e Redis;
- - [ ] Instalação de cluster Redis através de container;
- - [ ] Manipulação de diversos tipos de estrutura de dados com Redis-CLI;
- - [ ] Implementar paradigma de mensagens Pub/Sub;
- - [ ] Configurações básicas de persistência de dados.  
-
-    **Apache Kafka – Básico (Semana 6)**
+   **Apache Kafka – Básico (Semana 5)**
 
  - [ ] Entendimento de conceitos e arquitetura do Kafka e da Confluent;
  - [ ] Instalação de cluster Kafka através de container;
@@ -59,8 +41,16 @@
  - [ ] Custos com Confluent Cloud;
  - [ ] Otimização de parâmetros;
  - [ ] Melhores práticas em um cluster Kafka.
+
+   **Redis – Básico (Semana ?)**
+
+ - [ ] Entendimento de conceitos e arquitetura NoSQL e Redis;
+ - [ ] Instalação de cluster Redis através de container;
+ - [ ] Manipulação de diversos tipos de estrutura de dados com Redis-CLI;
+ - [ ] Implementar paradigma de mensagens Pub/Sub;
+ - [ ] Configurações básicas de persistência de dados.
  
-    **Elastic Essential I (Semana 7 e 8):**
+   **Elastic Essential I (Semana 7 e 8):**
 
  - [ ] Entendimento de conceitos e arquitetura da Elastic;
  - [ ] Instalação de cluster Elastic através de container;
@@ -73,21 +63,21 @@
  - [ ] Ingestão de dados através de beats e logstash;
  - [ ] Entendimento das guias do Kibana;
 
- **Spark - Big Data Processing (Semana 9, 10 e 11)**
+   **Spark - Big Data Processing (Semana 9, 10 e 11)**
 
-  - [ ] Uso do Jupyter Notebooks para a criação de projetos em Spark com Python
-  - [ ] Spark batch intermediario
-  - [ ] Operações com RDD em Spark para processamento de dados em batch;
-  - [ ] Uso de Partições com RDD;
-  - [ ] Operações com Dataset em Spark para processamento de dados em batch;
-  - [ ] Uso de Dataset em Dataframe e RDD;
-  - [ ] Comandos avançados com Dataset;
-  - [ ] Uso do IntelliJ IDEA para a criação de projetos em Spark com Scala;
-  - [ ] Struct Streaming para leitura de dados do Kafka;
-  - [ ] Spark Streaming para leitura de dados do Kafka;
-  - [ ] Otimizações com uso de Variáveis Compartilhadas;
-  - [ ] Criações de User defined Function;
-  - [ ] Configurações de Tunning para o Spark Application.
+ - [ ] Uso do Jupyter Notebooks para a criação de projetos em Spark com Python
+ - [ ] Spark batch intermediario
+ - [ ] Operações com RDD em Spark para processamento de dados em batch;
+ - [ ] Uso de Partições com RDD;
+ - [ ] Operações com Dataset em Spark para processamento de dados em batch;
+ - [ ] Uso de Dataset em Dataframe e RDD;
+ - [ ] Comandos avançados com Dataset;
+ - [ ] Uso do IntelliJ IDEA para a criação de projetos em Spark com Scala;
+ - [ ] Struct Streaming para leitura de dados do Kafka;
+ - [ ] Spark Streaming para leitura de dados do Kafka;
+ - [ ] Otimizações com uso de Variáveis Compartilhadas;
+ - [ ] Criações de User defined Function;
+ - [ ] Configurações de Tunning para o Spark Application.
 
   **Computador necessário para o treinamento:**
 
