@@ -1,0 +1,39 @@
+1- docker exec –it broker bash
+	kafka-topics --bootstrap-server localhost:9092 --topic msg-cli --create \
+--partitions 2 --replication-factor 1
+
+2- kafka-topics --bootstrap-server localhost:9092 --topic msg-cli --describe
+
+3- kafka-console-consumer –bootstrap-server localhost:9092 --topic msg-cli --group app-cli
+
+4- kafka-console-producer --broker-list localhost:9092 --topic msg-cli
+	a) Msg 1
+	b) Msg 2
+
+5- kafka-console-consumer –bootstrap-server localhost:9092 --topic msg-cli --group app-cli
+
+6- kafka-console-producer --broker-list localhost:9092 --topic msg-cli
+	a) Msg 4
+	b) Msg 5
+	d) Msg 6
+	e) Msg 7
+
+7- kafka-console-consumer –bootstrap-server localhost:9092 --topic msg-cli --group app2-cli
+
+8- kafka-console-producer --broker-list localhost:9092 --topic msg-cli
+	a) Msg 8
+	b) Msg 9
+	d) Msg 10
+	e) Msg 11
+
+9/10- kafka-consumer-groups –bootstrap-server localhost:9092 \ --group app-cli --reset-offsets --shift-by -2 --execute --topic msg-cli
+
+11- kafka-consumer-groups –bootstrap-server localhost:9092 --describe --group app-cli
+
+12- kafka-console-consumer –bootstrap-server localhost:9092 --topic msg-cli --group app-cli
+
+13- kafka-consumer-groups –bootstrap-server localhost:9092 \ --group app-cli --reset-offsets --to-earliest --execute --topic msg-cli 
+
+14- kafka-console-consumer –bootstrap-server localhost:9092 --topic msg-cli --group app-cli
+
+15- kafka-consumer-groups –bootstrap-server localhost:9092 --list
