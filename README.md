@@ -29,18 +29,18 @@
  
    **Apache Kafka – Básico (Semana 5)**
 
- - [ ] Entendimento de conceitos e arquitetura do Kafka e da Confluent;
- - [ ] Instalação de cluster Kafka através de container;
- - [ ] Gerenciamento de tópicos;
- - [ ] Produção e consumo de dados através do console;
- - [ ] Entendimento das guias do Control Center;
- - [ ] Desenvolvimento de stream com uso do KSQL;
- - [ ] Aplicação de KSQL Datagen;
- - [ ] Produção e consumo de dados com uso do Schema Registry;
- - [ ] Trabalhando com Kafka Connect;
- - [ ] Custos com Confluent Cloud;
- - [ ] Otimização de parâmetros;
- - [ ] Melhores práticas em um cluster Kafka.
+ - [X] Entendimento de conceitos e arquitetura do Kafka e da Confluent;
+ - [X] Instalação de cluster Kafka através de container;
+ - [X] Gerenciamento de tópicos;
+ - [X] Produção e consumo de dados através do console;
+ - [X] Entendimento das guias do Control Center;
+ - [X] Desenvolvimento de stream com uso do KSQL;
+ - [X] Aplicação de KSQL Datagen;
+ - [X] Produção e consumo de dados com uso do Schema Registry;
+ - [X] Trabalhando com Kafka Connect;
+ - [X] Custos com Confluent Cloud;
+ - [X] Otimização de parâmetros;
+ - [X] Melhores práticas em um cluster Kafka.
 
    **Redis – Básico (Semana ?)**
 
