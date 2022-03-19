@@ -1,0 +1,31 @@
+1- docker exec -it ksql-datagen bash
+	ksql-datagen
+		ksql-datagen bootstrap-server=broker:29092 schemaRegistryUrl=schema-registry:8081 quickstart= users topic= users
+
+2- print " users"
+	list topics;
+
+		show streams;
+
+			show tables;
+
+3- CREATE STREAM users_raw ( userid VARCHAR, registertime BIGINT) WITH (KAFKA_TOPIC='users', VALUE_FORMAT='JSON’, KEY='userid’, TIMESTAMP='registertime’);
+
+4- show streams;
+	
+	show tables;
+
+5- select * from users_raw;
+
+
+6- ksql-datagen bootstrap-server=broker:29092 schemaRegistryUrl=schema-registry:8081 quickstart= pageviews topic= pageviews
+	
+	print "pageviews"
+	
+		CREATE STREAM page_views ( userid VARCHAR, viewtime BIGINT) WITH (KAFKA_TOPIC='pageviews', VALUE_FORMAT='JSON’, KEY='userid', TIMESTAMP='viewtime');
+			
+			show streams;
+	
+				show tables;
+
+					select * from page_views;

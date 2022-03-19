@@ -1,0 +1,42 @@
+1- cd kafka
+	docker-compose up -d
+		docker exec -it schema-registry bash
+			pint "users";
+				list topics;
+
+2- kafka-topics --bootstrap-server localhost:9092 --topic users-avro --create --partitions 3 --replication-factor 1
+
+	kafa-topics --bootstrap-server localhost:9092 --topic users-avro --describe
+
+a) kafka-avro-console-producer --broker-list broker:29092 --topic users-avro --property schema.registry.url=http://localhost:8081 --property value.schema='{"type":"record","name":"myrecord","fields":[{"name":"id","type":"int"},
+{"name":"nome","type":"string"}]}'
+
+b) kafka-avro-console-consumer --topic users-avro --bootstrap-server broker:29092 --property schema.registry.url=http://localhost:8081 --from-beginning
+
+
+3- docker exec -it ksql-server ksql http://ksqldb-server:8088
+	list streams;
+		describe users-avro;
+
+4- create stream users-avro1 with (kafka_topic='users-avro', value_format='avro');
+
+
+5- SET 'auto.offset.reset'='earliest';
+	select * from users-avro1 emit changes;
+
+6- kafka-avro-console-producer --broker-list localhost:29092 --topic users-avro --property schema.registry.url:http://localhost:8081 --property value.schema='{"type":"record","name":"myrecord","fields":[{"name":"id","type":"int"},
+{"name":"nome","type":"string"},{"name":"unit","type":"int","default":"1"}]}'
+
+
+7- kafka-avro-console-consumer --topic users-avro --bootstrap-server broker:29092 --property schema.registry.url=http://localhost:8081 --from-beginning
+
+
+
+8- Control Center
+
+9- kafa-topics --bootstrap-sever localhost:9092 --topic users-avro --list
+	kafa-topics --bootstrap-sever localhost:9092 --list
+		list streams;
+			SET 'auto.offset.reset'='earliest';
+				select * from users-avro emit changes; 
+
