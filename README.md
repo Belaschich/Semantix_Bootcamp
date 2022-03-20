@@ -42,13 +42,13 @@
  - [X] Otimização de parâmetros;
  - [X] Melhores práticas em um cluster Kafka.
 
-   **Redis – Básico (Semana ?)**
+   **Redis – Básico (Semana 6)**
 
- - [ ] Entendimento de conceitos e arquitetura NoSQL e Redis;
- - [ ] Instalação de cluster Redis através de container;
- - [ ] Manipulação de diversos tipos de estrutura de dados com Redis-CLI;
- - [ ] Implementar paradigma de mensagens Pub/Sub;
- - [ ] Configurações básicas de persistência de dados.
+ - [X] Entendimento de conceitos e arquitetura NoSQL e Redis;
+ - [X] Instalação de cluster Redis através de container;
+ - [X] Manipulação de diversos tipos de estrutura de dados com Redis-CLI;
+ - [X] Implementar paradigma de mensagens Pub/Sub;
+ - [X] Configurações básicas de persistência de dados.
  
    **Elastic Essential I (Semana 7 e 8):**
 
