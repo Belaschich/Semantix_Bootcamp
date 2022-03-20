@@ -1,0 +1,23 @@
+1- cd redis
+	docker-compose up -d
+		docker exec -it redis bash
+			redis-cli
+				del pesquisa:produto
+
+2- sadd pesquisa:produto monitor mouse  teclado
+
+3- scard pesquisa:produto
+
+4- smembers pesquisa:produto
+
+5- sismember pesquisa:produto monitor
+
+6- srem pesquisa:produto monitor
+
+7- spop pesquisa:produto
+
+8- sadd pesquisa:desconto "memória RAM" monitor teclado HD
+
+9- sinter pesquisa:produto pesquisa:desconto
+	sdiff pesquisa:produto pesquisa:desconto
+		sunionstore pesquisa:produto_desconto pesquisa:produto pesquisa:desconto

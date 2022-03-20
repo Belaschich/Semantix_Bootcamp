@@ -1,0 +1,15 @@
+1- cd redis
+	docker-compose up -d
+		docker exec -it redis bash
+			redis-cli
+				subscribe noticias:sp
+
+2- publish noticias:sp 'Msg 1' 'Msg 2' 'Msg 3'
+
+3- unsubscribe noticias:sp ou Ctrl +c
+
+4- psubscribe noticias:*
+
+5- publish noticias:rj 'Msg 4' 'Msg 5' 'Msg 6'
+
+ 

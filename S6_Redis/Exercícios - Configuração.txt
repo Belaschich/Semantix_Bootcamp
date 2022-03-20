@@ -1,0 +1,18 @@
+1- cd redis
+	docker-compose up -d
+		docker exec -it redis bash
+			redis-cli
+				config get *
+
+2- config get appendonly
+
+3- config get appendonly no
+
+4- config get save
+
+5- config set save '120 500'
+
+6- config get maxmemory*
+
+7- config set maxmemory 1mb 
+	config set maxmemory-policy allkeys-lru 

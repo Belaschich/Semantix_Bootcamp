@@ -1,0 +1,26 @@
+1- cd redis
+	docker-compose up -d
+		docker exec -it redis bash
+			redis-cli
+				del usuario:100
+
+2- hmset usuario:100 nome Augusto estado SP views 10
+
+3- hgetall usuario:100
+
+4- hlen usuario:100
+
+5- hmget usuario:100 nome views
+
+6- hstrlen usuario:100 nome 
+
+7- hincrby usuario:100 views 2
+
+8- hkeys usuario:100
+
+9- hvals usuario:100 
+
+10- hdel usuario:100  estado
+
+
+

@@ -1,0 +1,25 @@
+1- cd redis
+	docker-compose up -d
+		docker exec -it redis bash
+			redis-cli
+				del pesquisa:produto
+
+2- zadd pesquisa:produto 100 monitor 20 HD 10 mouse 50 teclado
+
+<=================================================>
+
+1- zcard pesquisa:produto 
+
+2- zrevrange pesquisa:produto 0 -1 
+
+3- zrerank pesquisa:produto teclado 
+
+4- zscore pesquisa:produto teclado 
+
+5- zrem pesquisa:produto HD
+
+6- zpopmax pesquisa:produto
+
+7- zpopmin pesquisa:produto
+
+8- zrange pesquisa:produto -1 0

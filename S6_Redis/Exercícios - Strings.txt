@@ -1,0 +1,32 @@
+1- cd redis
+	docker-compose up -d
+		docker exec -it redis bash
+			redis-cli
+				SET usuario:nome izabela
+
+2- SET usuario:sobrenome schich
+
+3- get usuario:nome
+
+4- strlen usuario:nome 
+
+5- type usuario:sobrenome 
+
+6- SET views:qtd 100
+
+7- incrby views:qtd 10
+
+8- get views:qtd
+
+9- del usuario:sobrenome
+
+10- exists usuario:sobrenome
+
+11- expire views:qtd 3600 
+
+12- ttl views:qtd
+
+13- ttl usuario:nome
+
+14- persist views:qtd
+	
