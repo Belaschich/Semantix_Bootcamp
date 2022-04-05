@@ -52,16 +52,16 @@
  
    **Elastic Essential I (Semana 7 e 8):**
 
- - [ ] Entendimento de conceitos e arquitetura da Elastic;
- - [ ] Instalação de cluster Elastic através de container;
- - [ ] Realizar operações de CRUD em índices;
- - [ ] Gerenciamento de índices;
- - [ ] Alteração de mapeamento e reindex;
- - [ ] Desenvolvimento de consultas do tipo term, terms, range, match e multi_match, com uso de bool query;
- - [ ] Aplicação de analyzers em atributos;
- - [ ] Desenvolvimento de agregações básicas;
- - [ ] Ingestão de dados através de beats e logstash;
- - [ ] Entendimento das guias do Kibana;
+ - [X] Entendimento de conceitos e arquitetura da Elastic;
+ - [X] Instalação de cluster Elastic através de container;
+ - [X] Realizar operações de CRUD em índices;
+ - [X] Gerenciamento de índices;
+ - [X] Alteração de mapeamento e reindex;
+ - [X] Desenvolvimento de consultas do tipo term, terms, range, match e multi_match, com uso de bool query;
+ - [X] Aplicação de analyzers em atributos;
+ - [X] Desenvolvimento de agregações básicas;
+ - [X] Ingestão de dados através de beats e logstash;
+ - [X] Entendimento das guias do Kibana;
 
    **Spark - Big Data Processing (Semana 9, 10 e 11)**
 
