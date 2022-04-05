@@ -1,0 +1,46 @@
+1- GET produto/_search
+{
+"query": {
+"match": {
+"descricao": {
+"query": "Windows Linux",
+"operator": "and"
+}
+}
+}
+}
+
+2- GET produto/_search
+{
+"query": {
+"match": {
+"descricao": {
+"query": "Windows Linux USB"
+}
+}
+}
+}
+
+3- GET produto/_search
+{
+"query": {
+"match": {
+"descricao": {
+"query": "Windows Linux USB",
+"minimum_should_match": 2
+}
+}
+}
+}
+
+4- GET produto/_search
+{
+"query": {
+"match": {
+"descricao": {
+"query": "Windows Linux USB",
+"minimum_should_match": "50%"
+}
+}
+}
+}

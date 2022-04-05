@@ -1,0 +1,15 @@
+1- arquivos baixados
+
+2- docker instalado
+
+3- cd elastic
+	docker pull docker.elastic.co/elasticsearch/elasticsearch:7.9.2
+		docker pull docker.elastic.co/kibana/kibana:7.9.2
+			docker pull docker.elastic.co/logstash/logstash:7.9.2
+
+4- cat config_vma.sh
+	chmod +x config_vm.sh
+		./config_vm.sh
+			ls
+
+ 

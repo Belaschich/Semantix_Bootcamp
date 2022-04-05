@@ -1,0 +1,85 @@
+=> Docker:
+sudo apt update
+sudo apt upgrade
+sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce
+sudo systemctl status docker
+Check:
+sudo docker run hello-world
+Sem sudo:
+sudo usermod -aG docker $(whoami)
+sudo reboot
+
+=> Docker-Compose:
+sudo curl -L https://github.com/docker/compose/releases/download/1.25.3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+Check:
+docker-compose --version
+mkdir elastic
+cd elastic
+nano docker-compose.yml
+Conteudo:
+version: '2.2'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
+    ports:
+      - "9200:9200"
+    volumes: 
+      - es-data:/usr/share/elasticsearch/data
+      - ./settings/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+      - ./data:/data
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"  
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1  
+    networks: 
+      - elastic
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.9.2
+    volumes: 
+      - ./settings/kibana.yml:/usr/share/kibana/config/kibana.yml:ro   
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch       
+    networks: 
+      - elastic
+  
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.9.2
+    volumes:
+      - ./pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro
+      - ./settings/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+    ports:
+      - "9600:9600"
+      - "5044:5044"
+    depends_on: 
+      - elasticsearch  
+    networks:
+      - elastic        
+
+networks:
+  elastic:
+    driver: bridge
+
+volumes:
+  es-data:
+    driver: local
+
+docker-compose up
+docker ps -a
+docker images
+docker-compose down
+docker ps -a
+docker images
+Para remover container e imagem respectivamente temos: docker rm <id> E docker rmi <id>
+
+

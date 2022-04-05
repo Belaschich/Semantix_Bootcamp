@@ -1,0 +1,76 @@
+1- GET produto/_search
+{
+"query": {
+"term": {
+"nome": "mouse"
+}
+}
+}
+
+2- GET produto/_search
+{
+"query": {
+"terms": {
+"nome": ["mouse", "teclado"]
+}
+}
+}
+
+3- 
+GET produto/_search
+{
+"query": {
+"constant_score": {
+"filter": {
+"term": {
+"nome": "mouse"
+}
+}
+}
+}
+}
+
+GET produto/_search
+{
+"query": {
+"constant_score": {
+"filter": {
+"terms": {
+"nome": ["mouse", "teclado"]
+}
+}
+}
+}
+}
+
+4- GET produto/_search
+{
+"query": {
+"match":{
+"descricao": "USB"
+}
+}
+}
+
+
+5- GET produto/_search
+{
+“query": {
+"bool": {
+"must": [{"match": {"descricao": "USB"}}], 
+"must_not": [{"match": {"descriçao": "Linux"}}]
+}
+}
+}
+
+6- GET produto/_search
+{
+“query": {
+"bool": {
+"should":[ 
+{"match": {"nome": "memória"},
+{"match": {"descricao": "USB"}}],
+"must_not": [{"match": {"descriacao": "Linux"}}]
+}
+}
+} 

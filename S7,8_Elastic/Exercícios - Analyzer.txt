@@ -1,0 +1,98 @@
+1- POST _analyze
+{
+"analyzer": "standard",
+"text": "O elasticsearch surgiu em 2010"
+}
+
+
+POST _analyze
+{
+"analyzer": "simple",
+"text": "O elasticsearch surgiu em 2010"
+}
+ 
+
+POST _analyze
+{
+"analyzer": "brazilian",
+"text": "O elasticsearch surgiu em 2010"
+}
+
+POST _analyze
+{
+"analyzer": "portuguese",
+"text": "O elasticsearch surgiu em 2010"
+}
+
+
+2- 
+
+a) PUT produto1
+{
+"settings": {
+"index": {
+"number_of_shards": 1,
+"number_of_replicas": 0,
+}
+},
+"mappings": {
+"properties": {
+"descricao": {
+"type": "text",
+"analyzer": "brazilian"
+}
+}
+}
+}
+
+POST _reindex
+{
+"source": {
+"index": "produto"},
+"dest": {
+"index": "produto1"
+}
+}
+
+b) PUT produto1
+{
+"settings": {
+"index": {
+"number_of_shards": 1,
+"number_of_replicas": 0,
+}
+},
+"mappings": {
+"properties": {
+"descricao": {
+"type": "text",
+"analyzer": "brazilian",
+"fields": {
+"original": {"type": "keyword"}
+}
+}
+}
+}
+}
+
+c) GET produto1/_search
+{
+"query": {
+"match": {
+"descricao.original": {
+"query": "compativel"
+}
+}
+}
+}
+
+d) GET produto/_search
+{
+"query": {
+"match": {
+"descricao": {
+"query": "compativel"
+}
+}
+}
+} 

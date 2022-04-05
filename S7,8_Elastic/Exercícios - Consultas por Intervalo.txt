@@ -1,0 +1,65 @@
+1- HEAD populacao
+
+2- 
+a) GET populacao/_search
+{
+"query": {
+"range" : {
+"Total Population" : {
+"lt" : 100
+}
+}
+}
+}
+
+b) GET populacao/_search
+{
+"query": {
+"range" : {
+"Median Age" : {
+"gt" : 70
+}
+}
+}
+}
+
+c)  GET populacao/_search
+{
+"query": {
+"range" : {
+"Zip Code" : {
+"gte" : 90056,
+"lte" : 90067
+}
+}
+}
+}
+
+3- importar arquivo para o localhost
+
+4- 
+a) GET bolsa/_search
+{
+"query": {
+"range" : {
+"timestamp" : {
+"gte": "2019/01/01",
+"lte": "2019/03/01",
+"format": "yyyy/MM/dd"
+}
+}
+}
+}
+
+b) GET bolsa/_search
+{
+"query": {
+"range" : {
+"timestamp" : {
+"gte": "2019/04/01",
+"lte": "now",
+"format": "yyyy/MM/dd"
+}
+}
+}
+}  

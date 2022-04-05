@@ -1,0 +1,29 @@
+1- cd filebeat-7.9.2-linux-x86_64/
+
+	vi filebeat.yml
+	(outputs:
+		#output.elasticsearch:
+			#hosts:["localhost:9200"]
+		output.logstash:
+			hosts:["localhost:5044"])
+
+2- vi pipeline/logstash.conf
+
+	(index => "izabela-%{+yyyy.MM.dd}")
+
+	docker-compose down
+	docker-compose up -d
+	
+./filebeat test config
+
+./filebeat test output
+
+rm -rf data/
+
+rm -rf logs/
+
+./filebeat -e
+
+3- GET izabela-2022.04.02/_search
+
+	

@@ -1,0 +1,8 @@
+1- 
+	a) GET produto/search?q=nome:mouse
+	b) GET produto/search?q=qtd:30
+	c) GET produto/search?q=descricao:USB
+	d) GET produto/search?q=nome:hd&q=descricao:windows
+	e) GET produto/search?q=nome:memória&q=descricao:GB&q=descricao:DDR4
+
+2- GET _all/_search?&size=5&from=15
